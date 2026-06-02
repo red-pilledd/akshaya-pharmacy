@@ -10,7 +10,7 @@ export function LocalBusinessJsonLd() {
     description:
       "Akshaya Community Pharmacy is South Kerala's largest community pharmacy network, providing genuine branded and generic medicines at 15–60% discount across 75+ stores in Kollam, Thiruvananthapuram, and Alappuzha.",
     url: "https://akshaya-pharmacy.vercel.app",
-    telephone: "+91-94470-12345",
+    telephone: "+91-92078-56815",
     email: "info@akshayapharmacy.in",
     address: {
       "@type": "PostalAddress",
@@ -140,7 +140,7 @@ export function FaqJsonLd() {
         name: "How can I get an Akshaya Community Pharmacy franchise?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "You can apply for a franchise by visiting our Franchise page and filling the inquiry form, or by calling +91 94470 12345. Our team will contact you within 2 business days.",
+          text: "You can apply for a franchise by visiting our Franchise page and filling the inquiry form, or by calling +91 92078 56815. Our team will contact you within 2 business days.",
         },
       },
       {

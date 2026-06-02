@@ -224,7 +224,7 @@ export default function HomePage() {
                 Explore Franchise <ArrowRight className="w-5 h-5" />
               </Link>
               <a
-                href="tel:+919447012345"
+                href="tel:+919207856815"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-amber-700/30 border border-white/30 text-white font-semibold rounded-xl hover:bg-amber-700/50 transition-colors text-lg"
               >
                 <Phone className="w-5 h-5" /> Call Us Now

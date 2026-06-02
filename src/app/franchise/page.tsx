@@ -31,7 +31,7 @@ export default function FranchisePage() {
               <a href="#apply" className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-amber-700 font-bold rounded-xl hover:bg-amber-50 transition-colors shadow">
                 Apply Now
               </a>
-              <a href="tel:+919447012345" className="inline-flex items-center gap-2 px-6 py-3.5 bg-amber-800/40 border border-white/30 text-white font-semibold rounded-xl hover:bg-amber-800/60 transition-colors">
+              <a href="tel:+919207856815" className="inline-flex items-center gap-2 px-6 py-3.5 bg-amber-800/40 border border-white/30 text-white font-semibold rounded-xl hover:bg-amber-800/60 transition-colors">
                 <Phone className="w-5 h-5" /> Call to Discuss
               </a>
             </div>

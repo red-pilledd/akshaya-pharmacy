@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
 
               {[
-                { icon: Phone, label: "Phone", value: "+91 94470 12345", href: "tel:+919447012345" },
+                { icon: Phone, label: "Phone", value: "+91 92078 56815", href: "tel:+919207856815" },
                 { icon: Mail, label: "Email", value: "info@akshayapharmacy.in", href: "mailto:info@akshayapharmacy.in" },
                 { icon: MapPin, label: "Head Office", value: "Main Road, Kollam Town, Kerala 691001", href: null },
                 { icon: Clock, label: "Working Hours", value: "Mon – Sat: 9:00 AM – 6:00 PM", href: null },

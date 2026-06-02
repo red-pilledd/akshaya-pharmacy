@@ -122,7 +122,7 @@ export default function FranchiseForm() {
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">Something went wrong. Please call us directly at +91 94470 12345.</p>
+        <p className="text-sm text-red-600">Something went wrong. Please call us directly at +91 92078 56815.</p>
       )}
 
       <button
