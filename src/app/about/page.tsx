@@ -21,10 +21,10 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <span className="text-sm font-semibold text-amber-400 tracking-widest uppercase">Our Story</span>
             <h1 className="text-4xl lg:text-5xl font-extrabold mt-3 mb-5">
-              Healthcare That Puts People First
+              Empowering Health, Enriching Communities
             </h1>
             <p className="text-emerald-100 text-lg leading-relaxed">
-              Akshaya Community Pharmacy was founded with a single belief: no family should struggle to afford the medicines they need. We set out to change that by building a pharmacy network rooted in transparency, quality, and genuine community service.
+              Founded on the principles of integrity, accessibility, and care, Akshaya Community Pharmacy has grown from a local drugstore into a trusted retail pharmacy chain. Our mission is simple: to bridge the gap between quality healthcare and the communities that need it most.
             </p>
           </div>
         </div>
@@ -35,17 +35,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
-              <span className="text-sm font-semibold text-amber-600 tracking-widest uppercase">The Beginning</span>
-              <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-5">From One Store to a Movement</h2>
+              <span className="text-sm font-semibold text-amber-600 tracking-widest uppercase">Who We Are</span>
+              <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-5">More Than a Pharmacy</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Akshaya Community Pharmacy began with a simple observation: families in South Kerala were spending a disproportionate share of their income on medicines. The retail pharmacy system, loaded with multiple layers of distribution, was passing enormous markups on to patients who could least afford it.
+                  Founded on the principles of integrity, accessibility, and care, Akshaya Community Pharmacy has grown from a local drugstore into a trusted retail pharmacy chain. Our mission is simple: to bridge the gap between quality healthcare and the communities that need it most.
                 </p>
                 <p>
-                  We launched our first store in Kollam with a promise — every customer would pay significantly less than the MRP, every time. No tricks, no compromises on quality, and no fine print. Just honest pharmacy at honest prices.
+                  We don&apos;t just dispense prescriptions; we build relationships. By combining a wide range of healthcare products with expert guidance, we ensure that every neighbourhood we enter receives the highest standard of pharmaceutical care.
                 </p>
                 <p>
-                  The response from the community was overwhelming. Within months, patients were travelling from neighbouring areas just to fill their prescriptions at Akshaya. The demand to expand was unmistakable. Today, with 75+ stores across three districts, we are proud to be South Kerala's largest community pharmacy network.
+                  As we expand, our core commitment remains unchanged — putting your health and well-being first.
                 </p>
               </div>
             </div>
