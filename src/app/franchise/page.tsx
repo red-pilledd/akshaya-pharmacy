@@ -57,7 +57,7 @@ export default function FranchisePage() {
               { icon: Truck, title: "Reliable Supply Chain", desc: "Stock is delivered directly to your store from our central warehouse. No sourcing, no supplier negotiations." },
               { icon: BarChart3, title: "Business Training", desc: "Full onboarding training, software system, and ongoing operational support from our team." },
               { icon: ShieldCheck, title: "Regulatory Guidance", desc: "We guide you through all pharmacy licensing, compliance, and documentation — reducing the bureaucratic burden." },
-              { icon: CheckCircle, title: "Exclusive Territory", desc: "Each franchise receives a defined territory with no overlapping Akshaya stores, protecting your market." },
+              { icon: CheckCircle, title: "Exclusive Territory", desc: "Each franchise receives a defined territory with no overlapping Akshaya stores, protecting your market. T&C apply." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="rounded-2xl border border-gray-200 p-6 hover:shadow-md hover:border-amber-200 transition-all">
                 <div className="w-11 h-11 rounded-xl bg-amber-100 flex items-center justify-center mb-4">
