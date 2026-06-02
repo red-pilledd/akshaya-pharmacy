@@ -57,7 +57,7 @@ export default function StoreMap({ stores, activeDistrict }: Props) {
   });
 
   return (
-    <div className="w-full h-[480px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+    <div className="relative z-0 w-full h-[480px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
       <MapContainer
         center={centre}
         zoom={activeDistrict === "All" ? 9 : 11}
