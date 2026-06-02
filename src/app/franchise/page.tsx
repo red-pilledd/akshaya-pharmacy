@@ -111,10 +111,10 @@ export default function FranchisePage() {
               <div className="space-y-4">
                 {[
                   { req: "Licensed Pharmacist", detail: "A B.Pharm or D.Pharm graduate must be on staff (can be employed)." },
-                  { req: "Shop Space", detail: "Minimum 200–400 sq. ft. in a commercially accessible location." },
-                  { req: "Pharmacy License", detail: "State Drug License from Kerala State Pharmacy Council (we assist with the process)." },
+                  { req: "Shop Space", detail: "Minimum 350 sq. ft. in a commercially accessible location." },
+                  { req: "Pharmacy License", detail: "Drug License from Drugs Control Department (we can assist with the process)." },
                   { req: "Initial Investment", detail: "Covers franchise fee, interior setup, and opening stock. Contact us for current rates." },
-                  { req: "Working Capital", detail: "Sufficient working capital to sustain operations for the first 3 months." },
+                  { req: "Working Capital", detail: "Sufficient working capital to sustain operations for the first 6 months." },
                 ].map(({ req, detail }) => (
                   <div key={req} className="flex gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
