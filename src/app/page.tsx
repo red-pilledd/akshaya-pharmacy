@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, MapPin, Users, TrendingDown, Star, ChevronRight, Phone } from "lucide-react";
+import { FaqJsonLd } from "@/components/JsonLd";
 
 export default function HomePage() {
   return (
     <>
+      <FaqJsonLd />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">

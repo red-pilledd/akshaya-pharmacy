@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import StoresClient from "./StoresClient";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Find a Store",
+  alternates: { canonical: "https://akshaya-pharmacy.vercel.app/stores" },
   description: "Locate the nearest Akshaya Community Pharmacy in Kollam, Thiruvananthapuram, or Alappuzha. 75+ stores offering 15–60% off on medicines.",
 };
 
@@ -16,6 +18,10 @@ export default async function StoresPage({ searchParams }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "https://akshaya-pharmacy.vercel.app" },
+        { name: "Our Stores", url: "https://akshaya-pharmacy.vercel.app/stores" },
+      ]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-800 to-emerald-900 text-white py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

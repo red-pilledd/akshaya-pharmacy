@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import { Heart, Target, Eye, Award, Users, TrendingDown, ShieldCheck, MapPin } from "lucide-react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "About Us",
+  alternates: { canonical: "https://akshaya-pharmacy.vercel.app/about" },
   description: "Learn about Akshaya Community Pharmacy — our story, mission, and commitment to affordable healthcare in South Kerala.",
 };
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "https://akshaya-pharmacy.vercel.app" },
+        { name: "About Us", url: "https://akshaya-pharmacy.vercel.app/about" },
+      ]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-800 to-emerald-900 text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

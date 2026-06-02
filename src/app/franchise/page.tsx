@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { TrendingUp, Users, Truck, BarChart3, ShieldCheck, Phone, CheckCircle } from "lucide-react";
 import FranchiseForm from "@/components/FranchiseForm";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://akshaya-pharmacy.vercel.app/franchise" },
   title: "Franchise Opportunity",
   description: "Own an Akshaya Community Pharmacy franchise. Low investment, proven model, and full support. Join 75+ store owners across South Kerala.",
 };
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
 export default function FranchisePage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "https://akshaya-pharmacy.vercel.app" },
+        { name: "Franchise Opportunity", url: "https://akshaya-pharmacy.vercel.app/franchise" },
+      ]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-amber-500 to-amber-700 text-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

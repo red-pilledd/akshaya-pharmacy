@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://akshaya-pharmacy.vercel.app/contact" },
   title: "Contact Us",
   description: "Get in touch with Akshaya Community Pharmacy. Reach us for medicine inquiries, franchise questions, or feedback.",
 };
@@ -10,6 +12,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "https://akshaya-pharmacy.vercel.app" },
+        { name: "Contact Us", url: "https://akshaya-pharmacy.vercel.app/contact" },
+      ]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-800 to-emerald-900 text-white py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
