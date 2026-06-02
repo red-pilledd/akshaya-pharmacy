@@ -2,7 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "919447012345"; // replace with real number
+const WHATSAPP_NUMBER = "919207856815"; // replace with real number
 const DEFAULT_MESSAGE = encodeURIComponent(
   "Hi Akshaya Community Pharmacy! I'd like to know more about medicines/franchise opportunities."
 );

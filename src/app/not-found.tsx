@@ -28,7 +28,7 @@ export default function NotFound() {
           <MapPin className="w-4 h-4" /> Find a Store
         </Link>
         <a
-          href="tel:+919447012345"
+          href="tel:+919207856815"
           className="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-gray-700 font-semibold rounded-xl hover:border-emerald-300 hover:text-emerald-700 transition-colors bg-white"
         >
           <Phone className="w-4 h-4" /> Call Us
