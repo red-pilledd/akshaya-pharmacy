@@ -1,18 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { stores, districts, type Store } from "@/lib/stores";
+import type { Store } from "@/lib/schema";
 import { MapPin, Phone, Tag, Navigation } from "lucide-react";
 
 const StoreMap = dynamic(() => import("@/components/StoreMap"), { ssr: false });
 
+const DISTRICTS = ["Kollam", "Thiruvananthapuram", "Alappuzha"] as const;
+
 export default function StoresClient({ initialDistrict }: { initialDistrict: string }) {
-  const validDistricts = ["All", ...districts] as const;
+  const [allStores, setAllStores] = useState<Store[]>([]);
+  const [loadingStores, setLoadingStores] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/stores")
+      .then((r) => r.json())
+      .then((data) => { setAllStores(Array.isArray(data) ? data : []); setLoadingStores(false); })
+      .catch(() => setLoadingStores(false));
+  }, []);
+
+  const validDistricts = ["All", ...DISTRICTS] as const;
   const initial = validDistricts.includes(initialDistrict as any) ? initialDistrict : "All";
   const [active, setActive] = useState<string>(initial);
 
-  const filtered = active === "All" ? stores : stores.filter((s) => s.district === active);
+  const filtered = active === "All" ? allStores : allStores.filter((s) => s.district === active);
+
+  if (loadingStores) {
+    return (
+      <div className="flex items-center justify-center py-20 text-gray-400 text-sm gap-2">
+        <div className="w-4 h-4 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
+        Loading stores…
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -28,13 +49,15 @@ export default function StoresClient({ initialDistrict }: { initialDistrict: str
                 : "bg-white text-gray-600 border-gray-200 hover:border-emerald-300 hover:text-emerald-700"
             }`}
           >
-            {d === "All" ? `All Districts (${stores.length})` : `${d} (${stores.filter((s) => s.district === d).length})`}
+            {d === "All"
+              ? `All Districts (${allStores.length})`
+              : `${d} (${allStores.filter((s) => s.district === d).length})`}
           </button>
         ))}
       </div>
 
       {/* Map */}
-      <StoreMap stores={stores} activeDistrict={active} />
+      <StoreMap stores={allStores} activeDistrict={active} />
 
       {/* Store grid */}
       <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -53,12 +76,11 @@ export default function StoresClient({ initialDistrict }: { initialDistrict: str
             </div>
             <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-1">{store.name}</h3>
             <p className="text-xs text-gray-500 mb-3 leading-relaxed">{store.address}</p>
-            <a
-              href={`tel:${store.phone}`}
-              className="flex items-center gap-1.5 text-xs text-emerald-700 font-medium hover:text-emerald-900"
-            >
-              <Phone className="w-3.5 h-3.5" /> {store.phone}
-            </a>
+            {store.phone && (
+              <a href={`tel:${store.phone}`} className="flex items-center gap-1.5 text-xs text-emerald-700 font-medium hover:text-emerald-900">
+                <Phone className="w-3.5 h-3.5" /> {store.phone}
+              </a>
+            )}
             <div className="mt-3 flex items-center justify-between">
               <span className="text-[11px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">{store.district}</span>
               <a
@@ -74,7 +96,7 @@ export default function StoresClient({ initialDistrict }: { initialDistrict: str
         ))}
       </div>
 
-      {filtered.length === 0 && (
+      {filtered.length === 0 && !loadingStores && (
         <div className="text-center py-20 text-gray-400">No stores found for this filter.</div>
       )}
     </div>

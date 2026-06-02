@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
-import type { Store } from "@/lib/stores";
+import type { Store } from "@/lib/schema";
 
 interface Props {
   stores: Store[];
