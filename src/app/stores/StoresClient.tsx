@@ -3,7 +3,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { stores, districts, type Store } from "@/lib/stores";
-import { MapPin, Phone, Tag } from "lucide-react";
+import { MapPin, Phone, Tag, Navigation } from "lucide-react";
 
 const StoreMap = dynamic(() => import("@/components/StoreMap"), { ssr: false });
 
@@ -59,8 +59,16 @@ export default function StoresClient({ initialDistrict }: { initialDistrict: str
             >
               <Phone className="w-3.5 h-3.5" /> {store.phone}
             </a>
-            <div className="mt-2">
+            <div className="mt-3 flex items-center justify-between">
               <span className="text-[11px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">{store.district}</span>
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${store.lat},${store.lng}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-xs text-blue-600 font-medium hover:text-blue-800"
+              >
+                <Navigation className="w-3 h-3" /> Directions
+              </a>
             </div>
           </div>
         ))}

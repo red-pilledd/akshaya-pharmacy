@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, MapPin, Users, TrendingDown, Star, ChevronRight, Phone } from "lucide-react";
 import { FaqJsonLd } from "@/components/JsonLd";
+import SavingsCalculator from "@/components/SavingsCalculator";
 
 export default function HomePage() {
   return (
@@ -173,6 +174,36 @@ export default function HomePage() {
                 <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Savings Calculator */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-sm font-semibold text-amber-600 tracking-widest uppercase">See the Difference</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-4">
+                How Much Will You Save?
+              </h2>
+              <p className="text-gray-500 leading-relaxed mb-6">
+                Most people spend far more on medicines than they need to. Enter any medicine&apos;s MRP and see exactly how much you&apos;d save by buying it at Akshaya Community Pharmacy.
+              </p>
+              <div className="space-y-3">
+                {[
+                  { example: "₹500 diabetes medicine", savings: "Save ₹75–300" },
+                  { example: "₹200 antibiotic course", savings: "Save ₹30–120" },
+                  { example: "₹1,000 cardiac medicine", savings: "Save ₹150–600" },
+                ].map(({ example, savings }) => (
+                  <div key={example} className="flex items-center justify-between text-sm py-2 border-b border-gray-100">
+                    <span className="text-gray-600">{example}</span>
+                    <span className="font-semibold text-emerald-700">{savings}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <SavingsCalculator />
           </div>
         </div>
       </section>
