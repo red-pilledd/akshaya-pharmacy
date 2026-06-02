@@ -81,7 +81,7 @@ export default function FranchisePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { step: "1", title: "Submit Inquiry", desc: "Fill the form below or call us. Share your district and location preference." },
+              { step: "1", title: "Submit Inquiry", desc: "Fill the form below or call us. Share us your location preference." },
               { step: "2", title: "Initial Discussion", desc: "Our franchise team contacts you within 2 days for a detailed conversation." },
               { step: "3", title: "Site Evaluation", desc: "We jointly evaluate your proposed location for footfall and market potential." },
               { step: "4", title: "Agreement & Setup", desc: "Sign the franchise agreement. We help with setup, interior, and stock loading." },
