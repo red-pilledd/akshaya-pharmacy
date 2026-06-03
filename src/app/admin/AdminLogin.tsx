@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Cross, Lock } from "lucide-react";
+import Image from "next/image";
+import { Lock } from "lucide-react";
 
 export default function AdminLogin() {
   const [password, setPassword] = useState("");
@@ -29,8 +30,8 @@ export default function AdminLogin() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-700 flex items-center justify-center mx-auto mb-4">
-            <Cross className="w-7 h-7 text-white fill-white" />
+          <div className="bg-white rounded-xl px-4 py-2 inline-block mb-4">
+            <Image src="/logo.png" alt="Akshaya Community Pharmacy" width={120} height={40} className="h-10 w-auto object-contain" />
           </div>
           <h1 className="text-xl font-bold text-gray-900">Akshaya Admin</h1>
           <p className="text-sm text-gray-500 mt-1">Store Management Portal</p>

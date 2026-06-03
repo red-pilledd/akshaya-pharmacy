@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Cross, MapPin, Phone, Mail, Share2, AtSign } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Phone, Mail, Share2, AtSign } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,13 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center">
-                <Cross className="w-5 h-5 text-white fill-white" />
-              </div>
-              <div>
-                <div className="font-bold text-white text-base leading-none">Akshaya</div>
-                <div className="text-xs text-amber-400 font-semibold tracking-wide">Community Pharmacy</div>
+            <div className="mb-4">
+              <div className="inline-block bg-white rounded-xl px-3 py-2">
+                <Image
+                  src="/logo.png"
+                  alt="Akshaya Community Pharmacy"
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto object-contain"
+                />
               </div>
             </div>
             <p className="text-sm text-emerald-300 leading-relaxed">
