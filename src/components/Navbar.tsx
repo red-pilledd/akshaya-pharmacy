@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Cross } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -37,14 +38,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-lg bg-emerald-700 flex items-center justify-center shadow-sm">
-              <Cross className="w-5 h-5 text-white fill-white" />
-            </div>
-            <div className="leading-tight">
-              <div className="font-bold text-emerald-800 text-base leading-none">Akshaya</div>
-              <div className="text-xs text-amber-600 font-semibold tracking-wide leading-tight">Community Pharmacy</div>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Akshaya Community Pharmacy"
+              width={140}
+              height={48}
+              className="h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
